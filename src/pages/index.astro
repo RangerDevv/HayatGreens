@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import backgroundVid from '../assets/video/backgroundVid.mp4'
+---
+
+<Layout title="HayatGreens">
+	<header class="flex flex-col sm:flex-row items-center justify-center" id="header">
+		<video id="backgroundVideo" autoplay loop muted>
+			<source src={backgroundVid} type="video/mp4">
+		</video>
+
+		<div class="text-white text-center w-1/2 flex flex-col gap-10 pt-[12vw]">
+			<h1 class="text-4xl sm:text-6xl font-bold">Pure Plant Perfection: Where True Flavor Meets Sustainability</h1>
+			<div class="flex flex-row gap-6 sm:gap-16 justify-center items-center text-lg">
+				<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2">Order Now</button>
+				<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2">Learn More</button>
+			</div>
+		</div>
+	</header>
+</Layout>
+
+<style>
+	#backgroundVideo {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+		filter: brightness(0.8);
+	}
+</style>

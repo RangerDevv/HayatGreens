@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav class="w-[90vw] h-16 mx-auto flex flex-row text-white mt-5 rounded-full text-xl" id="nav">
+			<div class="flex flex-row gap-10 flex-1 pt-3.5 pl-10 text-2xl">
+				<a href="/">Hayat Greens</a>
+				<a href="/about">About</a>
+				<a href="/contact">Contact</a>
+			</div>
+			<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 mr-10">Order Now</button>
+		</nav>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+	:root{
+		background-color: #FFF8DA;
+		font-family: "Inika", serif;
+		font-weight: 400;
+		font-style: normal;
+		color: black;
+	}
+
+	#nav {
+		/* blur the nav */
+		backdrop-filter: blur(10px);
+		background-color: #fff8da21;
+	}
+</style>
