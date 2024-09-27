@@ -4,7 +4,24 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+// import the locomotive-scroll css
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 ---
+
+<script>
+	import LocomotiveScroll from 'locomotive-scroll';
+	const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+	},
+	{
+	el: document.querySelector('[data-scroll-image]'),
+	lerp: 0.1,
+});
+
+	scroll;
+</script>
 
 <!doctype html>
 <html lang="en">
@@ -17,13 +34,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="w-[90vw] h-16 mx-auto flex flex-row text-white mt-5 rounded-full text-xl" id="nav">
-			<div class="flex flex-row gap-10 flex-1 pt-3.5 pl-10 text-2xl">
+		<nav class="w-screen h-16 flex flex-row justify-center text-white text-xl fixed z-50 py-2" id="nav">
+			<div class="flex flex-row gap-10 flex-1 pl-10 text-2xl pt-2">
 				<a href="/">Hayat Greens</a>
 				<a href="/about">About</a>
 				<a href="/contact">Contact</a>
 			</div>
-			<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 mr-10">Order Now</button>
+			<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mr-2">Order Now</button>
 		</nav>
 		<slot />
 	</body>
@@ -42,6 +59,7 @@ const { title } = Astro.props;
 	#nav {
 		/* blur the nav */
 		backdrop-filter: blur(10px);
-		background-color: #fff8da21;
+		background-color: #00000071;
 	}
+	
 </style>

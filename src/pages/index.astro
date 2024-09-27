@@ -1,25 +1,122 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import backgroundVid from '../assets/video/backgroundVid.mp4'
+
+import ponzuTofuPokeBowl from '../assets/image/ponzuTofuPokeBowl.jpg';
+import vegetableFood from '../assets/image/vegetableFood.jpg';
+import image6 from '../assets/image/image 6.png';
+import image7 from '../assets/image/image 7.png';
+
 ---
 
 <Layout title="HayatGreens">
-	<header class="flex flex-col sm:flex-row items-center justify-center" id="header">
-		<video id="backgroundVideo" autoplay loop muted>
-			<source src={backgroundVid} type="video/mp4">
-		</video>
-
-		<div class="text-white text-center w-1/2 flex flex-col gap-10 pt-[12vw]">
-			<h1 class="text-4xl sm:text-6xl font-bold">Pure Plant Perfection: Where True Flavor Meets Sustainability</h1>
-			<div class="flex flex-row gap-6 sm:gap-16 justify-center items-center text-lg">
-				<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2">Order Now</button>
-				<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2">Learn More</button>
+	<main data-scroll-container>
+		<header class="grid grid-cols-2 gap-4 h-screen bg-[#3B6B38] text-white" id="header" data-scroll-section>
+			<div class="overflow-clip -translate-y-1/2 rotate-180">
+				<img src={image6.src} id="img6" />
 			</div>
-		</div>
-	</header>
+			<div class="flex flex-col items-center justify-center -translate-y-1/4 ">
+				<p class=" text-2xl ">📍Address: 5615 Hobart Street <br> Pittsburgh PA 15217</p>
+				<p class=" text-2xl ">📞 Phone: 111-222-3344 <br>
+				Email: hayatgreens@mail.com</p>
+				<p class=" text-2xl ">🕒 Hours: 12:00 PM - 9:00 PM <br> Moday -Friday</p>
+			</div>
+			<div class="-translate-y-1/2 p-10 ">
+				<p class=" text-6xl font-semibold">Hayat Greens</p>
+				<p class=" text-3xl pt-5">Pure Plant Perfection: Where True Flavor Meets Sustainability </p>
+				<div class="flex flex-row gap-3 pt-5 text-2xl">
+					<button class="bg-[#FF4221] text-white px-10 h-12 rounded-full mt-2 text-xl">Menu</button>
+					<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl">Learn More</button>
+				</div>
+			</div>
+			<div class=" overflow-clip -translate-y-1/2 translate-x-1/4">
+				<img src={image7.src} id="img7"/>
+			</div>
+		</header>
+
+		<section class="flex flex-col-reverse sm:flex-row items-center justify-center w-[100%] h-screen bg-[#FFF8DA]" data-scroll-section>
+			<div class="flex flex-col justify-center gap-10 p-10 sm:w-1/2 h-full">
+				<h2 class="text-3xl sm:text-5xl font-bold">Discover The Pure Taste of Perfectionon</h2>
+				<p class="text-xl sm:text-3xl sm:w-[35vw]">Vegan food does not have to be just raw vegetables with a basic sauce. Vegetables hold great flavor when done right. That is our goal: to serve you with the best meals with great authentic flavor. </p>
+				<div><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl">Order Now</button></div>
+			</div>
+			<span class="w-1/2 flex flex-col items-center justify-center" data-scroll-image data-scroll data-scroll-delay="0.1" data-scroll-speed="2">
+				<img src={ponzuTofuPokeBowl.src} alt="Ponzu Tofu Poke Bowl" class="sm:w-[30vw] h-auto rounded-xl shadow-2xl">
+				<p class="text-md pt-4">Ponzu tofu poke bowl</p>
+			</span>
+		</section>
+
+		<section class="flex flex-col sm:flex-row items-center justify-center sm:w-[100%] h-screen bg-black p-10" data-scroll-section>
+			<div id="section1Main" class="sm:w-1/2 h-full m-10 bg-gray-500 rounded-2xl flex flex-col justify-center items-center gap-12">
+				<div class="flex flex-col gap-12 w-full h-full justify-center items-center">
+					<div id="section1" class="h-full w-full gap-10 flex flex-col justify-center items-center p-10">
+						<h2 class="text-2xl sm:text-5xl font-bold text-white">Our Commitment to Sustainability</h2>
+						<p class="text-lg sm:text-3xl text-white">At cooking cooks we are dedicated to conserving the environment by sourcing our vegetables from farms that value the environment just as much as their product quality</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-col gap-12 p-4 sm:w-1/2">
+				<div id="section2Main" class="h-1/2 bg-gray-500 rounded-2xl flex flex-col justify-center items-center">
+					<div class="flex flex-col gap-12 w-full h-full justify-center items-center py-20 p-10" id="section1">
+						<h2 class="text-2xl sm:text-5xl font-bold text-white">Healthy Food From The Get-Go</h2>
+						<p class="text-lg sm:text-3xl text-white">We ensure all the ingredients in our food are non-GMO so that you can enjoy the true authenticity of food </p>
+					</div>
+				</div>
+				<div id="section3Main" class=" h-1/2 bg-green-700 rounded-2xl flex flex-col justify-center items-center">
+					<div class="flex flex-col gap-12 w-full h-full justify-center items-center py-10 p-10" id="section1">
+						<h2 class="text-2xl sm:text-5xl font-bold text-white p-10">We Lead Innovation: Learn More About Our Commitments <a href=""><span class=" pb-3 mb-3 px-3 text-3xl font-extrabold text-black rounded-full bg-[#D6FA32]"><strong>→</strong></span></a></h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="flex flex-col items-center justify-center w-[100%] h-screen bg-[#FFF8DA] p-16" data-scroll-section>
+			<h1 class="text-4xl sm:text-6xl font-bold">What Our Customers Say</h1>
+			<div class="flex flex-row overflow-x-scroll h-full w-screen p-10">
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
+						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
+					</div>
+					<div class=" flex flex-col justify-center w-[30vw]">
+						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-full rounded-lg h-auto"/>
+					</div>
+				</div>
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
+						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
+					</div>
+					<div class=" flex flex-col justify-center w-[30vw]">
+						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-96 rounded-lg h-auto"/>
+					</div>
+				</div>
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
+						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
+					</div>
+					<div class=" flex flex-col justify-center w-[30vw]">
+						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-96 rounded-lg h-auto"/>
+					</div>
+				</div>
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
+						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
+					</div>
+					<div class=" flex flex-col justify-center w-[30vw]">
+						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-96 rounded-lg h-auto"/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section></section>
+	</main>
 </Layout>
 
-<style>
+<style is:global>
 	#backgroundVideo {
 		width: 100vw;
 		height: 100vh;
@@ -32,4 +129,30 @@ import backgroundVid from '../assets/video/backgroundVid.mp4'
 		z-index: -1;
 		filter: brightness(0.8);
 	}
+
+	/* make the  green wall image a background image for the section1 */
+	#section1Main {
+		background-image: url('../assets/image/green-wall.jpeg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	#section2Main {
+		background-image: url('../assets/image/chefCookingFood.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	#section3Main {
+		background-image: url('../assets/image/healthySalad.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	#section1 {
+		backdrop-filter: brightness(0.6);
+	}
+
+	/* make the image 6 and 7 only show half of the image */
+	
 </style>
