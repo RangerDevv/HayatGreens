@@ -18,18 +18,18 @@ import image5 from '../assets/image/image-5.png';
 
 <Layout title="HayatGreens">
 	<main data-scroll-container>
-		<header class="grid grid-cols-2 gap-4 h-screen bg-[#254723] text-white" id="header" data-scroll-section>
+		<header class="grid grid-cols-2 gap-4 h-screen bg-[#faecad]" id="header" data-scroll-section>
 			<div class="overflow-clip -translate-y-1/2 rotate-180">
 				<img src={bowl1.src} id="img6" />
 			</div>
 			<div class="flex flex-col items-center justify-center -translate-y-1/4 ">
 			</div>
 			<div class="-translate-y-1/2 p-10">
-				<p class=" text-6xl font-semibold">Hayat Greens</p>
+				<p class=" text-6xl font-bold">Hayat Greens</p>
 				<p class=" text-3xl pt-5">Pure Plant Perfection: Where True Flavor Meets Sustainability </p>
 				<div class="flex flex-row gap-3 pt-5 text-2xl">
-					<button class="bg-[#FF4221] text-white px-10 h-12 rounded-full mt-2 text-xl">Menu</button>
-					<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl">Learn More</button>
+					<a href="/order"><button class="bg-[#FF4221] text-white px-10 h-12 rounded-full mt-2 text-xl shadow-lg">Menu</button></a>
+					<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg">Learn More</button>
 				</div>
 			</div>
 			<div class=" overflow-clip -translate-y-96 translate-x-[5vw] w-[75vw]">
@@ -39,9 +39,9 @@ import image5 from '../assets/image/image-5.png';
 
 		<section class="flex flex-col-reverse sm:flex-row items-center justify-center w-[100%] h-screen bg-[#FFF8DA]" data-scroll-section>
 			<div class="flex flex-col justify-center gap-10 p-10 sm:w-1/2 h-full">
-				<h2 class="text-3xl sm:text-5xl font-bold">Discover The Pure Taste of Perfectionon</h2>
+				<h2 class="text-3xl sm:text-5xl font-bold">Discover The Pure Taste of Perfection</h2>
 				<p class="text-xl sm:text-3xl sm:w-[35vw]">Vegan food does not have to be just raw vegetables with a basic sauce. Vegetables hold great flavor when done right. That is our goal: to serve you with the best meals with great authentic flavor. </p>
-				<div><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl">Order Now</button></div>
+				<div><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg">Order Now</button></div>
 			</div>
 			<span class="w-1/2 flex flex-col items-center justify-center" data-scroll-image data-scroll data-scroll-delay="0.1" data-scroll-speed="2">
 				<img src={ponzuTofuPokeBowl.src} alt="Ponzu Tofu Poke Bowl" class="sm:w-[30vw] h-auto rounded-xl shadow-2xl">
@@ -60,23 +60,23 @@ import image5 from '../assets/image/image-5.png';
 			</div>
 			<div class="flex flex-col gap-12 p-4 sm:w-1/2">
 				<div id="section2Main" class="h-1/2 bg-gray-500 rounded-2xl flex flex-col justify-center items-center">
-					<div class="flex flex-col gap-12 w-full h-full justify-center items-center py-20 p-10" id="section1">
+					<div class="flex flex-col gap-12 w-full h-full justify-center items-center py-16 p-10" id="section1">
 						<h2 class="text-2xl sm:text-5xl font-bold text-white">Healthy Food From The Get-Go</h2>
 						<p class="text-lg sm:text-3xl text-white">We ensure all the ingredients in our food are non-GMO so that you can enjoy the true authenticity of food </p>
 					</div>
 				</div>
 				<div id="section3Main" class=" h-1/2 bg-green-700 rounded-2xl flex flex-col justify-center items-center">
-					<div class="flex flex-col gap-12 w-full h-full justify-center items-center py-10 p-10" id="section1">
-						<h2 class="text-2xl sm:text-5xl font-bold text-white p-10">We Lead Innovation: Learn More About Our Commitments <a href=""><span class=" pb-3 mb-3 px-3 text-3xl font-extrabold text-black rounded-full bg-[#D6FA32]"><strong>→</strong></span></a></h2>
+					<div class="flex flex-col gap-12 w-full h-full justify-center items-center py-24 p-10" id="section1">
+						<h2 class="text-2xl sm:text-5xl font-bold text-white ">We Lead Innovation: Learn More About Our Commitments <a href=""><span class=" pb-3 mb-3 px-3 text-3xl font-extrabold text-black rounded-full bg-[#D6FA32]"><strong>→</strong></span></a></h2>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="flex flex-col items-center justify-center w-[100%] h-screen bg-[#FFF8DA] p-16" data-scroll-section>
+		<section class="flex flex-col items-center justify-center w-[100%] h-screen bg-[#FFF8DA] p-16 snap-x" data-scroll-section>
 			<h1 class="text-4xl sm:text-5xl font-bold">What Our Customers Say</h1>
-			<div class="flex flex-row overflow-x-scroll h-full w-screen p-10">
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+			<div class="flex flex-row overflow-x-scroll h-full w-screen p-10 snap-x snap-mandatory">
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
 					<div class="flex flex-col gap-10 justify-center w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
@@ -85,7 +85,7 @@ import image5 from '../assets/image/image-5.png';
 						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-full rounded-lg h-auto"/>
 					</div>
 				</div>
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
 					<div class="flex flex-col gap-10 justify-center w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
@@ -94,7 +94,7 @@ import image5 from '../assets/image/image-5.png';
 						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-full rounded-lg h-auto"/>
 					</div>
 				</div>
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
 					<div class="flex flex-col gap-10 justify-center w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
@@ -103,7 +103,7 @@ import image5 from '../assets/image/image-5.png';
 						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-full rounded-lg h-auto"/>
 					</div>
 				</div>
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center">
+				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
 					<div class="flex flex-col gap-10 justify-center w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
@@ -124,7 +124,7 @@ import image5 from '../assets/image/image-5.png';
 
 			<div class="flex flex-col justify-center items-center gap-16">
 				<p class="text-6xl font-extrabold">Are You Hungry Yet?</p>
-				<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl">Order Now</button>
+				<button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg hover:shadow-xl transition-all">Order Now</button>
 			</div>
 
 			<div class="flex flex-col gap-5 translate-x-48">
@@ -171,7 +171,7 @@ import image5 from '../assets/image/image-5.png';
 
 	#section1 {
 		backdrop-filter: brightness(0.6);
-	}
+	}button
 
 	/* make the overflow-y scrollbar more rounded and appealing */
 	::-webkit-scrollbar {
@@ -191,5 +191,5 @@ import image5 from '../assets/image/image-5.png';
 	::-webkit-scrollbar {
 		height: 12px;
 	}
-	
+
 </style>

@@ -11,6 +11,8 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 <script>
 	import LocomotiveScroll from 'locomotive-scroll';
+
+onload = () => {
 	const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
@@ -19,8 +21,9 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 	el: document.querySelector('[data-scroll-image]'),
 	lerp: 0.1,
 });
+scroll;
+	};
 
-	scroll;
 </script>
 
 <!doctype html>
@@ -39,6 +42,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 				<a href="/">Hayat Greens</a>
 				<a href="/about">About</a>
 				<a href="/contact">Contact</a>
+				<a href="/documentation">Documentation Portfolio</a>
 			</div>
 			<a href="/order"><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mr-2">Order Now</button></a>
 		</nav>
@@ -46,11 +50,11 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 	</body>
 </html>
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 	:root{
 		background-color: #FFF8DA;
-		font-family: "Inika", serif;
+		font-family: "Raleway", sans-serif;
 		font-weight: 400;
 		font-style: normal;
 		color: black;
@@ -61,5 +65,14 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 		backdrop-filter: blur(10px);
 		background-color: #00000071;
 	}
-	
+
+	/* cool hover animation */
+	nav a:hover {
+	    background: linear-gradient(90deg, #D6FA32, #FFC0CB);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: background-position 0.5s;
+    }
+
 </style>
