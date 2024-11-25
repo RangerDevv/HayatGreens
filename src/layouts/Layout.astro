@@ -12,15 +12,16 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 <script>
 	import LocomotiveScroll from 'locomotive-scroll';
 
+	const container = document.querySelector('[data-scroll-container]') as HTMLElement;
+
 onload = () => {
-	const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-	},
+	const scroll = new LocomotiveScroll(
 	{
-	el: document.querySelector('[data-scroll-image]'),
-	lerp: 0.1,
-});
+    el: container,
+    smooth: true,
+    lerp: 0.1
+	},
+	);
 scroll;
 	};
 
