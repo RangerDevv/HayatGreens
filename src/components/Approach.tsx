@@ -5,6 +5,20 @@ import { FiExternalLink } from "react-icons/fi";
 import { SlGlobe } from "react-icons/sl";
 import { FaChartPie } from "react-icons/fa";
 
+// import all the images
+import vegSpread from "../assets/image/vegspread.jpg";
+import farm from "../assets/image/farm.jpg";
+import leaf from "../assets/image/leaf.jpeg";
+import recycleTruck from "../assets/image/recycletruck.jpg";
+import vegetableFood from "../assets/image/vegetableFood.jpg";
+import vegetableFood2 from "../assets/image/vegfood2.jpg";
+import vegetableFood3 from "../assets/image/vegfood3.jpg";
+import truch from "../assets/image/truck.jpeg";
+import chefCooking from "../assets/image/chefcooking.jpg";
+import servingFood from "../assets/image/servingfood.jpg";
+import diningFood from "../assets/image/diningin.jpg";
+import deliveringFood from "../assets/image/deliveringFood.jpg";
+
 const Approach = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".divAnimation");
@@ -81,7 +95,7 @@ const Approach = () => {
           <div className="min-w-[40%] max-w-[40%] rounded-3xl flex flex-col gap-5 flex-shrink">
             <div className="divAnimation w-full border-black flex-grow rounded-3xl border-2 flex flex-col justify-end overflow-hidden gap-2">
               <img
-                src="src\assets\image\vegspread.jpg"
+                src={vegSpread.src}
                 alt="Farm"
                 className="w-full h-full object-cover"
               />
@@ -128,7 +142,7 @@ const Approach = () => {
                 </div>
                 <div className="divAnimation w-full border-black rounded-3xl border-2 flex flex-row justify-center items-center overflow-hidden">
                   <img
-                    src="src\assets\image\leaf.jpeg"
+                    src={leaf.src}
                     alt="Farm"
                     className="w-full h-full object-cover"
                   />
@@ -173,7 +187,7 @@ const Approach = () => {
               </div>
               <div className="divAnimation rounded-3xl border-2 flex w-full h-[60%] border-black flex-row justify-center items-center overflow-hidden">
                 <img
-                  src="src\assets\image\recycletruck.jpg"
+                  src={recycleTruck.src}
                   alt="Farm"
                   className="w-full h-full object-cover"
                 />
@@ -197,7 +211,7 @@ const Approach = () => {
             >
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
-                  src="src\assets\image\farm.jpg"
+                  src={farm.src}
                   alt="Farm"
                   className="w-full h-full object-cover"
                 />
@@ -226,7 +240,7 @@ const Approach = () => {
             >
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
-                  src="src\assets\image\truck.jpeg"
+                  src={truch.src}
                   alt="Farm"
                   className="w-full h-full object-cover"
                 />
@@ -256,7 +270,7 @@ const Approach = () => {
             >
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
-                  src="src\assets\image\chefcooking.jpg"
+                  src={chefCooking.src}
                   alt="Farm"
                   className="w-full h-full object-cover"
                 />
@@ -286,7 +300,7 @@ const Approach = () => {
             >
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
-                  src="src\assets\image\servingfood.jpg"
+                  src={servingFood.src}
                   alt="Farm"
                   className="w-full h-full object-cover"
                 />
@@ -324,7 +338,7 @@ const Approach = () => {
             <div className="flex-grow flex-col flex gap-5 h-full">
               <div className="divAnimation rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
                 <img
-                  src="src\assets\image\diningin.jpg"
+                  src={diningFood.src}
                   alt="Farm"
                   className="w-full h-full object-cover"
                 />
@@ -346,7 +360,7 @@ const Approach = () => {
             <div className="flex-col-reverse flex gap-5 h-full min-w-[28.5%]">
               <div className="divAnimation rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
                 <img
-                  src="src\assets\image\deliveringFood.jpg"
+                  src={deliveringFood.src}
                   alt="Farm"
                   className="w-full h-full object-cover"
                 />
@@ -368,7 +382,7 @@ const Approach = () => {
             </div>
             <div className="divAnimation max-w-[43%] flex-col flex gap-5 rounded-3xl border-green-700 w-full border-2 h-full overflow-hidden">
               <img
-                src="src\assets\image\vegfood3.jpg"
+                src={vegetableFood3.src}
                 alt="Farm"
                 className="w-full h-full object-cover"
               />
