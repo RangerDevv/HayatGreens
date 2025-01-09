@@ -1,0 +1,65 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <nav
+      class="w-screen h-16 flex flex-row justify-center text-white text-xl fixed z-50 py-2"
+      id="nav"
+    >
+      <div class="flex flex-row gap-10 flex-1 pl-10 text-2xl pt-2">
+        <a href="/">Hayat Greens</a>
+        <a href="/approach">Our Approach</a>
+        <a href="/documentation">Documentation Portfolio</a>
+      </div>
+      <a href="/order"
+        ><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mr-2"
+          >Order Now</button
+        ></a
+      >
+    </nav>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+  :root {
+    background-color: #fff8da;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    scroll-behavior: smooth;
+  }
+
+  #nav {
+    /* blur the nav */
+    backdrop-filter: blur(10px);
+    background-color: #00000071;
+  }
+
+  /* cool hover animation */
+  nav a:hover {
+    background: linear-gradient(90deg, #d6fa32, #ffc0cb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 0.5s;
+    /* an underline animation */
+    text-decoration: none;
+  }
+</style>
