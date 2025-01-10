@@ -91,20 +91,20 @@ const Approach = () => {
       </style>
       <main className="flex flex-col pb-10" data-scroll-container>
         <section
-          className=" w-full flex flex-row gap-5 justify-between px-10 pb-32 mb-16"
+          className=" w-full flex flex-row gap-5 justify-between sm:px-10 pb-32 mb-16"
           data-scroll-section
         >
           <div className="divAnimation rounded-3xl border-black flex-grow border-2 flex flex-col justify-end p-5 gap-3 pb-14">
-            <h1 className="sm:text-2xl md:text-6xl lg:text-8xl w-[90%] text-balance font-bold text-green-700">
+            <h1 className="text-6xl lg:text-8xl w-[90%] text-balance font-bold text-green-700">
               Our Approach and Commitments
             </h1>
             <p className="text-3xl w-[80%]">
-              At Hayat Greens we make sure to deliver the most premium food
+              At Seimei Greens we make sure to deliver the most premium food
               possible sourced ethically and sustainably to ensure customer
               satisfaction in all areas
             </p>
           </div>
-          <div className="min-w-[40%] max-w-[40%] rounded-3xl flex flex-col gap-5 flex-shrink">
+          <div className="hidden sm:block min-w-[40%] max-w-[40%] rounded-3xl flex flex-col gap-5 flex-shrink">
             <div className="divAnimation w-full border-black flex-grow rounded-3xl border-2 flex flex-col justify-end overflow-hidden gap-2">
               <img
                 src={vegSpread.src}
@@ -144,8 +144,8 @@ const Approach = () => {
           <h1 className="flex text-[3.5rem] font-bold text-green-700">
             Our Sustainable and Eco-Friendly Practices
           </h1>
-          <div className="w-full flex flex-row gap-5 justify-between h-[42rem]">
-            <div className="min-w-[38%] max-w-[38%] rounded-3xl flex flex-col gap-5 flex-shrink">
+          <div className="w-full flex flex-col sm:flex-row gap-5 justify-between sm:h-[42rem]">
+            <div className="sm:min-w-[38%] sm:max-w-[38%] rounded-3xl flex flex-col gap-5 flex-shrink">
               <div className="w-full h-[45%] gap-5 flex flex-row">
                 <div className="divAnimation w-full border-black rounded-3xl border-2 flex flex-col p-5 justify-end gap-3">
                   <SlGlobe size={70} color="green" className="spinnable" />
@@ -153,7 +153,7 @@ const Approach = () => {
                     Going Green in More Ways Than One
                   </h1>
                 </div>
-                <div className="divAnimation w-full border-black rounded-3xl border-2 flex flex-row justify-center items-center overflow-hidden">
+                <div className="divAnimation hidden sm:block w-full border-black rounded-3xl border-2 flex flex-row justify-center items-center overflow-hidden">
                   <img
                     src={leaf.src}
                     alt="leaf"
@@ -218,7 +218,7 @@ const Approach = () => {
           <h1 className="flex text-[3.5rem] font-bold text-green-700">
             From the Farm to the Table
           </h1>
-          <div className="w-full flex flex-row gap-5 justify-between h-[42rem]">
+          <div className="w-full flex flex-col sm:flex-row gap-5 justify-between sm:h-[42rem]">
             <div
               className="divAnimation flex-grow flex-col flex gap-5 h-full w-full rounded-3xl border-black border-2
                             p-0 overflow-hidden"
@@ -236,7 +236,7 @@ const Approach = () => {
                     Step 1: Sourcing and Cultivation
                   </h1>
                   <p className="text-lg">
-                    At Hayat Greens, we make sure to source and cultivate our
+                    At Seimei Greens, we make sure to source and cultivate our
                     foods from vegan and vegetarian farms, ensuring that our
                     food is not cross contaminated with unwanted substances. We
                     pledge that our food is GMO free, providing our customers
@@ -361,9 +361,9 @@ const Approach = () => {
           <h1 className="flex text-[3.5rem] font-bold text-green-700">
             Ready to Eat? Choose How!
           </h1>
-          <div className="w-full flex flex-row gap-5 justify-between h-[42rem]">
+          <div className="w-full flex flex-col sm:flex-row gap-5 justify-between sm:h-[42rem]">
             <div className="flex-grow flex-col flex gap-5 h-full">
-              <div className="divAnimation rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
+              <div className="divAnimation hidden sm:block rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
                 <img
                   src={diningFood.src}
                   alt="dining food"
@@ -385,7 +385,7 @@ const Approach = () => {
               </div>
             </div>
             <div className="flex-col-reverse flex gap-5 h-full min-w-[28.5%]">
-              <div className="divAnimation rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
+              <div className="divAnimation hidden sm:block rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
                 <img
                   src={deliveringFood.src}
                   alt="delivering food"
@@ -402,12 +402,12 @@ const Approach = () => {
                 </p>
                 <a href="/order">
                   <button className="bg-[#D6FA32] text-black px-10 h-12 rounded-full text-xl shadow-lg w-fit">
-                    Order Now
+                    Reserve a Table Now
                   </button>
                 </a>
               </div>
             </div>
-            <div className="divAnimation max-w-[43%] flex-col flex gap-5 rounded-3xl border-green-700 w-full border-2 h-full overflow-hidden">
+            <div className="divAnimation hidden sm:block max-w-[43%] flex-col flex gap-5 rounded-3xl border-green-700 w-full border-2 h-full overflow-hidden">
               <img
                 src={vegetableFood3.src}
                 alt="vegetable salad"
