@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { SlGlobe } from "react-icons/sl";
 import { FaChartPie } from "react-icons/fa";
@@ -13,11 +13,12 @@ import recycleTruck from "../assets/image/recycletruck.jpg";
 import vegetableFood from "../assets/image/vegetableFood.jpg";
 import vegetableFood2 from "../assets/image/vegfood2.jpg";
 import vegetableFood3 from "../assets/image/vegfood3.jpg";
-import truch from "../assets/image/truck.jpeg";
+import truck from "../assets/image/truck.jpeg";
 import chefCooking from "../assets/image/chefcooking.jpg";
 import servingFood from "../assets/image/servingfood.jpg";
 import diningFood from "../assets/image/diningin.jpg";
 import deliveringFood from "../assets/image/deliveringFood.jpg";
+import Overlay from "./Overlay";
 
 const Approach = () => {
   useEffect(() => {
@@ -45,6 +46,17 @@ const Approach = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  const handleDivClick = (targetRef : any) => {
+    targetRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const section1 = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+
+  const [overlayIndex, setOverlayIndex] = useState(-1);
+  const closeOverlay = () => setOverlayIndex(-1);
 
   return (
     <>
@@ -96,24 +108,24 @@ const Approach = () => {
             <div className="divAnimation w-full border-black flex-grow rounded-3xl border-2 flex flex-col justify-end overflow-hidden gap-2">
               <img
                 src={vegSpread.src}
-                alt="Farm"
+                alt="veg spread"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="divAnimation w-full border-black rounded-3xl border-2 flex-shrink flex flex-col overflow-hidden p-5">
               <h1 className="text-[3.5rem] font-bold">Learn About Our</h1>
               <div className="flex flex-row gap-2 flex-grow">
-                <div className="border-2 border-black hover:border-[#35c05f] active:border-[#288f47] py-5 px-4 rounded-l-3xl flex flex-col justify-center items-center w-full group cursor-pointer">
+                <div onClick={() => handleDivClick(section1)} className="border-2 border-black hover:border-[#35c05f] active:border-[#288f47] py-5 px-4 rounded-l-3xl flex flex-col justify-center items-center w-full group cursor-pointer">
                   <h2 className="text-[1.6rem] group-hover:text-[#35c05f] group-active:text-[#288f47] underline underline-offset-4 text-nowrap">
                     Sustainability
                   </h2>
                 </div>
-                <div className="border-2 border-black hover:border-[#35c05f] active:border-[#288f47] py-5 px-4 flex flex-col justify-center items-center w-full group cursor-pointer">
+                <div onClick={() => handleDivClick(section2)} className="border-2 border-black hover:border-[#35c05f] active:border-[#288f47] py-5 px-4 flex flex-col justify-center items-center w-full group cursor-pointer">
                   <h2 className="text-[1.6rem] group-hover:text-[#35c05f] group-active:text-[#288f47] underline underline-offset-4 text-nowrap">
                     Farm-to-Plate
                   </h2>
                 </div>
-                <div className="border-2 border-black hover:border-[#35c05f] active:border-[#288f47] py-5 px-4 rounded-r-3xl flex flex-col justify-center items-center w-full group cursor-pointer">
+                <div onClick={() => handleDivClick(section3)} className="border-2 border-black hover:border-[#35c05f] active:border-[#288f47] py-5 px-4 rounded-r-3xl flex flex-col justify-center items-center w-full group cursor-pointer">
                   <h2 className="text-[1.6rem] group-hover:text-[#35c05f] group-active:text-[#288f47] underline underline-offset-4 text-center">
                     Ways to Eat
                   </h2>
@@ -127,6 +139,7 @@ const Approach = () => {
           className="flex flex-col -mt-32 px-10 bg-[#FAECAD] bg-opacity-30 justify-center gap-8"
           id="sustainability"
           data-scroll-section
+          ref={section1}
         >
           <h1 className="flex text-[3.5rem] font-bold text-green-700">
             Our Sustainable and Eco-Friendly Practices
@@ -143,7 +156,7 @@ const Approach = () => {
                 <div className="divAnimation w-full border-black rounded-3xl border-2 flex flex-row justify-center items-center overflow-hidden">
                   <img
                     src={leaf.src}
-                    alt="Farm"
+                    alt="leaf"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -168,7 +181,7 @@ const Approach = () => {
                 <h1 className="text-4xl text-balance font-semibold">
                   Not convinced? Our numbers speak for themselves!
                 </h1>
-                <button className="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg w-fit flex flex-row items-center justify-between gap-3">
+                <button onClick={() => setOverlayIndex(1)} className="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg w-fit flex flex-row items-center justify-between gap-3">
                   Open Table{" "}
                   <span>
                     <FiExternalLink size={24} />
@@ -188,7 +201,7 @@ const Approach = () => {
               <div className="divAnimation rounded-3xl border-2 flex w-full h-[60%] border-black flex-row justify-center items-center overflow-hidden">
                 <img
                   src={recycleTruck.src}
-                  alt="Farm"
+                  alt="recycle truck"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -200,6 +213,7 @@ const Approach = () => {
           className="flex flex-col px-10 mb-10 justify-center gap-8"
           id="farm-to-table"
           data-scroll-section
+          ref={section2}
         >
           <h1 className="flex text-[3.5rem] font-bold text-green-700">
             From the Farm to the Table
@@ -212,7 +226,7 @@ const Approach = () => {
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
                   src={farm.src}
-                  alt="Farm"
+                  alt="farm"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -229,8 +243,11 @@ const Approach = () => {
                     with the fresh experience they deserve.
                   </p>
                 </div>
-                <button className="p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
-                  Learn More
+                <button onClick={() => setOverlayIndex(2)} className="flex flex-row gap-2 items-center p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
+                  Learn More{" "}
+                  <span>
+                    <FiExternalLink size={20} />
+                  </span>
                 </button>
               </div>
             </div>
@@ -240,8 +257,8 @@ const Approach = () => {
             >
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
-                  src={truch.src}
-                  alt="Farm"
+                  src={truck.src}
+                  alt="truck"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -259,8 +276,11 @@ const Approach = () => {
                     efficient, electric vehicles.
                   </p>
                 </div>
-                <button className="p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
-                  Learn More
+                <button onClick={() => setOverlayIndex(3)} className="flex flex-row gap-2 items-center p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
+                  Learn More{" "}
+                  <span>
+                    <FiExternalLink size={20} />
+                  </span>
                 </button>
               </div>
             </div>
@@ -271,7 +291,7 @@ const Approach = () => {
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
                   src={chefCooking.src}
-                  alt="Farm"
+                  alt="chef cooking"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -289,8 +309,11 @@ const Approach = () => {
                     vegan ones.
                   </p>
                 </div>
-                <button className="p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
-                  Learn More
+                <button onClick={() => setOverlayIndex(4)} className="flex flex-row gap-2 items-center p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
+                  Learn More{" "}
+                  <span>
+                    <FiExternalLink size={20} />
+                  </span>
                 </button>
               </div>
             </div>
@@ -301,7 +324,7 @@ const Approach = () => {
               <div className="border-b-2 border-black w-full h-[46%]">
                 <img
                   src={servingFood.src}
-                  alt="Farm"
+                  alt="serving food"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -318,8 +341,11 @@ const Approach = () => {
                     modifications.
                   </p>
                 </div>
-                <button className="p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
-                  Learn More
+                <button onClick={() => setOverlayIndex(5)} className="flex flex-row gap-2 items-center p-2 px-3 border-neutral-200 border rounded-full bg-[#D6FA32] shadow-lg">
+                  Learn More{" "}
+                  <span>
+                    <FiExternalLink size={20} />
+                  </span>
                 </button>
               </div>
             </div>
@@ -330,6 +356,7 @@ const Approach = () => {
           className="flex flex-col bg-[#FAECAD] bg-opacity-30 px-10 mb-10 justify-center gap-8"
           id="process"
           data-scroll-section
+          ref={section3}
         >
           <h1 className="flex text-[3.5rem] font-bold text-green-700">
             Ready to Eat? Choose How!
@@ -339,7 +366,7 @@ const Approach = () => {
               <div className="divAnimation rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
                 <img
                   src={diningFood.src}
-                  alt="Farm"
+                  alt="dining food"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -361,7 +388,7 @@ const Approach = () => {
               <div className="divAnimation rounded-3xl border-black w-full border-2 h-[55%] overflow-hidden">
                 <img
                   src={deliveringFood.src}
-                  alt="Farm"
+                  alt="delivering food"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -383,12 +410,14 @@ const Approach = () => {
             <div className="divAnimation max-w-[43%] flex-col flex gap-5 rounded-3xl border-green-700 w-full border-2 h-full overflow-hidden">
               <img
                 src={vegetableFood3.src}
-                alt="Farm"
+                alt="vegetable salad"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
         </section>
+
+        {overlayIndex != -1 && <Overlay overlayIndex={overlayIndex} onClose={() => closeOverlay()} />}
       </main>
     </>
   );
