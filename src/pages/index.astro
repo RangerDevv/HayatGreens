@@ -18,21 +18,22 @@ import image5 from '../assets/image/image-5.png';
 
 <Layout title="HayatGreens">
 	<main data-scroll-container>
-		<header class="grid grid-cols-2 gap-4 h-screen bg-[#faecad]" id="header" data-scroll-section>
-			<div class="overflow-clip -translate-y-1/2 rotate-180">
+		<header class="grid grid-cols-2 gap-4 sm:h-[100vh] bg-[#faecad] pb-10" id="header" data-scroll-section>
+			<div class="hidden sm:block overflow-clip -translate-y-1/2 rotate-180">
 				<img src={bowl1.src} id="img6" />
 			</div>
-			<div class="flex flex-col items-center justify-center -translate-y-1/4 ">
+			<div class="hidden sm:block flex flex-col items-center justify-center -translate-y-1/4 ">
 			</div>
-			<div class="-translate-y-1/2 p-10">
+			<div class="sm:-translate-y-1/2 pt-24 sm:pt-6 pl-10 pr-10 sm:pr-0 w-[100vw] sm:w-auto">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPAPwsarFZIEZr-BG0lLJL-bnFO5Xd7C2bg&s" alt="Hayat Greens Logo" class="w-full rounded pb-10 h-auto"/>
 				<p class=" text-6xl font-bold">Hayat Greens</p>
-				<p class=" text-3xl pt-5">Pure Plant Perfection: Where True Flavor Meets Sustainability </p>
+				<p class=" text-3xl pt-5">Bringing North and South India Together on a Plate—Pure, Authentic, and Vegan </p>
 				<div class="flex flex-row gap-3 pt-5 text-2xl">
 					<a href="/order"><button class="bg-[#FF4221] text-white px-10 h-12 rounded-full mt-2 text-xl shadow-lg">Menu</button></a>
 					<a href="/approach"><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg">Learn More</button></a>
 				</div>
 			</div>
-			<div class=" overflow-clip -translate-y-96 translate-x-[5vw] w-[75vw]">
+			<div class="hidden sm:block overflow-clip -translate-y-96 translate-x-[5vw] w-[75vw]">
 				<img src={bowl2.src} id="img7"/>
 			</div>
 		</header>
@@ -40,7 +41,7 @@ import image5 from '../assets/image/image-5.png';
 		<section class="flex flex-col-reverse sm:flex-row items-center justify-center w-[100%] h-screen bg-[#FFF8DA]" data-scroll-section>
 			<div class="flex flex-col justify-center gap-10 p-10 sm:w-1/2 h-full">
 				<h2 class="text-3xl sm:text-5xl font-bold">Discover The Pure Taste of Perfection</h2>
-				<p class="text-xl sm:text-3xl sm:w-[35vw]">Vegan food does not have to be just raw vegetables with a basic sauce. Vegetables hold great flavor when done right. That is our goal: to serve you with the best meals with great authentic flavor. </p>
+				<p class="text-xl sm:text-3xl sm:w-[35vw]">we believe food is the heart of every culture. Our mission is to bring the best of North and South Indian cuisine to your table—delicious, fresh, and 100% vegan or vegetarian. We take pride in creating meals that are as wholesome as they are flavorful. </p>
 				<div><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg">Order Now</button></div>
 			</div>
 			<span class="w-1/2 flex flex-col items-center justify-center" data-scroll-image data-scroll data-scroll-delay="0.1" data-scroll-speed="2">
@@ -49,7 +50,7 @@ import image5 from '../assets/image/image-5.png';
 			</span>
 		</section>
 
-		<section class="flex flex-col sm:flex-row items-center justify-center sm:w-[100%] h-screen bg-black p-12 gap-8" data-scroll-section>
+		<section class="flex flex-col sm:flex-row items-center justify-center sm:w-[100%] sm:h-screen bg-black p-12 gap-8" data-scroll-section>
 			<div id="section1Main" class="sm:w-1/2 h-full bg-gray-500 rounded-2xl flex flex-col justify-center items-center gap-12">
 				<div class="flex flex-col gap-12 w-full h-full justify-center items-center">
 					<div id="section1" class="h-full w-full gap-10 flex flex-col justify-center items-center p-10">
@@ -60,7 +61,7 @@ import image5 from '../assets/image/image-5.png';
 			</div>
 			<div class="flex flex-col gap-8 sm:w-1/2 h-full">
 				<div id="section2Main" class="h-1/2 bg-gray-500 rounded-2xl flex flex-col justify-center items-center">
-					<div class="flex flex-col gap-12 w-full h-full justify-center items-start py-16 p-10" id="section1">
+					<div class="flex flex-col gap-8 w-full h-full justify-center items-start py-16 p-10" id="section1">
 						<h2 class="text-2xl sm:text-5xl font-bold text-white">Healthy Food From The Get-Go</h2>
 						<p class="text-lg sm:text-3xl text-white">We ensure all the ingredients in our food are non-GMO so that you can enjoy the true authenticity of food </p>
 					</div>
@@ -79,11 +80,11 @@ import image5 from '../assets/image/image-5.png';
 			</div>
 		</section>
 
-		<section class="flex flex-col items-center justify-center w-[100%] h-screen bg-[#FFF8DA] p-16 snap-x" data-scroll-section>
+		<section class="flex flex-col items-center justify-center w-[100%] bg-[#FFF8DA] p-16 snap-x" data-scroll-section>
 			<h1 class="text-4xl sm:text-5xl font-bold">What Our Customers Say</h1>
 			<div class="flex flex-row overflow-x-scroll h-full w-screen p-10 snap-x snap-mandatory">
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
-					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+				<div class="flex flex-col-reverse sm:flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
+					<div class="flex flex-col gap-10 justify-center w-screen sm:w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
 					</div>
@@ -91,8 +92,8 @@ import image5 from '../assets/image/image-5.png';
 						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-full rounded-lg h-auto"/>
 					</div>
 				</div>
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
-					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+				<div class="flex flex-col-reverse sm:flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
+					<div class="flex flex-col gap-10 justify-center w-screen sm:w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
 					</div>
@@ -100,8 +101,8 @@ import image5 from '../assets/image/image-5.png';
 						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-full rounded-lg h-auto"/>
 					</div>
 				</div>
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
-					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+				<div class="flex flex-col-reverse sm:flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
+					<div class="flex flex-col gap-10 justify-center w-screen sm:w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
 					</div>
@@ -109,8 +110,8 @@ import image5 from '../assets/image/image-5.png';
 						<img src="https://assets.bonappetit.com/photos/5e4c58a55f0567000a32b827/1:1/w_3635,h_3635,c_limit/HLY_Vegan%20Alfredo_Lede.jpg" class="w-full rounded-lg h-auto"/>
 					</div>
 				</div>
-				<div class="flex flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
-					<div class="flex flex-col gap-10 justify-center w-[50vw]">
+				<div class="flex flex-col-reverse sm:flex-row w-screen h-full rounded-2xl justify-center px-10 items-center snap-center">
+					<div class="flex flex-col gap-10 justify-center w-screen sm:w-[50vw]">
 						<p class="text-4xl p-4">Great food I really loved the vegan salad with the organic tofu. It was the most authentic food in the whole world and I really enjoyed this exquisite japanese cuisine </p>
 						<p class="text-2xl p-4 font-extrabold">- Xinyu Lou</p>
 					</div>
@@ -121,19 +122,19 @@ import image5 from '../assets/image/image-5.png';
 			</div>
 		</section>
 
-		<section class="flex flex-row justify-between items-center w-screen h-screen bg-[#FFF8DA] p-16" data-scroll-section data-scroll-delay="0.1" data-scroll-speed="2">
-			<div class="flex flex-col gap-5 -translate-x-48">
+		<section class="flex flex-row justify-between items-center h-screen w-screen bg-[#FFF8DA] pt-16" data-scroll-section data-scroll-delay="0.1" data-scroll-speed="2">
+			<div class="hidden sm:block flex flex-col gap-5 -translate-x-48">
 				<img src={image0.src} class="w-96 h-auto rounded-lg">
 				<img src={image1.src} class="w-96 h-auto rounded-lg">
 				<img src={image2.src} class="w-96 h-auto rounded-lg">
 			</div>
 
 			<div class="flex flex-col justify-center items-center gap-16">
-				<p class="text-6xl font-extrabold">Are You Hungry Yet?</p>
+				<p class="text-6xl text-center font-extrabold">Are You Hungry Yet?</p>
 				<a href="/order"><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mt-2 text-xl shadow-lg hover:shadow-xl transition-all">Order Now</button></a>
 			</div>
 
-			<div class="flex flex-col gap-5 translate-x-48">
+			<div class="hidden sm:block flex flex-col gap-5 translate-x-48">
 				<img src={image3.src} class="w-96 h-auto rounded-lg"/>
 				<img src={image4.src} class="w-96 h-auto rounded-lg"/>
 				<img src={image5.src} class="w-96 h-auto rounded-lg"/>

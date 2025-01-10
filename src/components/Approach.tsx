@@ -77,13 +77,13 @@ const Approach = () => {
                     }
                 `}
       </style>
-      <main className="flex flex-col h-fit pb-10" data-scroll-container>
+      <main className="flex flex-col pb-10" data-scroll-container>
         <section
-          className=" w-full flex flex-row gap-5 justify-between h-screen px-10 pb-32 mb-16"
+          className=" w-full flex flex-row gap-5 justify-between px-10 pb-32 mb-16"
           data-scroll-section
         >
           <div className="divAnimation rounded-3xl border-black flex-grow border-2 flex flex-col justify-end p-5 gap-3 pb-14">
-            <h1 className="text-8xl w-[90%] text-balance font-bold text-green-700">
+            <h1 className="sm:text-2xl md:text-6xl lg:text-8xl w-[90%] text-balance font-bold text-green-700">
               Our Approach and Commitments
             </h1>
             <p className="text-3xl w-[80%]">
@@ -124,7 +124,7 @@ const Approach = () => {
         </section>
 
         <section
-          className="flex flex-col -mt-32 px-10 bg-[#FAECAD] bg-opacity-30 h-screen justify-center gap-8"
+          className="flex flex-col -mt-32 px-10 bg-[#FAECAD] bg-opacity-30 justify-center gap-8"
           id="sustainability"
           data-scroll-section
         >
@@ -197,7 +197,7 @@ const Approach = () => {
         </section>
 
         <section
-          className="flex flex-col px-10 mb-10 h-screen justify-center gap-8"
+          className="flex flex-col px-10 mb-10 justify-center gap-8"
           id="farm-to-table"
           data-scroll-section
         >
@@ -327,7 +327,7 @@ const Approach = () => {
         </section>
 
         <section
-          className="flex flex-col bg-[#FAECAD] bg-opacity-30 px-10 mb-10 h-screen justify-center gap-8"
+          className="flex flex-col bg-[#FAECAD] bg-opacity-30 px-10 mb-10 justify-center gap-8"
           id="process"
           data-scroll-section
         >

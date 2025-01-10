@@ -41,8 +41,9 @@ scroll;
 		<nav class="w-screen h-16 flex flex-row justify-center text-white text-xl fixed z-50 py-2" id="nav">
 			<div class="flex flex-row gap-10 flex-1 pl-10 text-2xl pt-2">
 				<a href="/">Hayat Greens</a>
-				<a href="/approach">Our Approach</a>
-				<a href="/documentation">Documentation Portfolio</a>
+				<a class="hidden sm:block" href="/approach">Our Approach</a>
+				<a class="hidden sm:block" href="/about">Our Story</a>
+				<a class="hidden sm:block" href="/documentation">Documentation Portfolio</a>
 			</div>
 			<a href="/order"><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mr-2">Order Now</button></a>
 		</nav>
@@ -77,5 +78,13 @@ scroll;
         /* an underline animation */
         text-decoration: none;
     }
+
+	/* increase the font sizes depending on how big the screen is but keep it the default size on mobile and 768px */
+	@media (min-width: 1440px) {
+		html {
+			font-size: calc(13px + (24 - 18) * ((100vw - 768px) / (1920 - 768)));
+		}
+	}
+
 
 </style>

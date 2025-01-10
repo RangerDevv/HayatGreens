@@ -126,6 +126,7 @@
                     <p>${cart.reduce((acc, curr) => acc + curr.price, 0)}</p>
                 </div>
                 <div class="flex flex-row justify-between w-full text-2xl font-semibold px-5">
+                    
                     <p>Total</p>
                     <p>${cart.reduce((acc, curr) => acc + curr.price, 0)+15.30}</p>
                 </div>
