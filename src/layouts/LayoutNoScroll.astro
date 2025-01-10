@@ -8,30 +8,24 @@ const { title } = Astro.props;
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <nav
-      class="w-screen h-16 flex flex-row justify-center text-white text-xl fixed z-50 py-2"
-      id="nav"
-    >
-      <div class="flex flex-row gap-10 flex-1 pl-10 text-2xl pt-2">
-        <a href="/">Seimei Greens</a>
-        <a href="/approach">Our Approach</a>
-        <a href="/documentation">Documentation Portfolio</a>
-      </div>
-      <a href="/order"
-        ><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mr-2"
-          >Order Now</button
-        ></a
-      >
-    </nav>
-    <slot />
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav class="w-screen h-16 flex flex-row justify-center text-white text-xl fixed z-50 py-2" id="nav">
+			<div class="flex flex-row gap-10 flex-1 pl-10 text-2xl pt-2">
+				<a href="/">Seimei Greens</a>
+				<a class="hidden sm:block" href="/approach">Our Approach</a>
+				<a class="hidden sm:block" href="/about">Our Story</a>
+				<a class="hidden sm:block" href="/documentation">Documentation Portfolio</a>
+			</div>
+			<a href="/order"><button class="bg-[#D6FA32] text-black px-10 h-12 rounded-full mr-2">Order Now</button></a>
+		</nav>
+		<slot />
   </body>
 </html>
 <style is:global>

@@ -23,7 +23,7 @@ const Overlay: React.FC<OverlayProps> = ({ overlayIndex, onClose }) => {
                                             Competitor
                                         </th>
                                         <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Hayat Greens
+                                            Seimei Greens
                                         </th>
                                         <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Difference
@@ -110,7 +110,7 @@ const Overlay: React.FC<OverlayProps> = ({ overlayIndex, onClose }) => {
                     />
                 }
                 {overlayIndex === 2 && <Body title='Sourcing and Cultivation' body={<p className="text-xl">
-                    At Hayat Greens, we make sure to source and cultivate our
+                    At Seimei Greens, we make sure to source and cultivate our
                     foods from vegan and vegetarian farms, ensuring that our
                     food is not cross contaminated with unwanted substances. We
                     pledge that our food is GMO free, providing our customers

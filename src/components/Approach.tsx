@@ -104,7 +104,7 @@ const Approach = () => {
               satisfaction in all areas
             </p>
           </div>
-          <div className="hidden sm:block min-w-[40%] max-w-[40%] rounded-3xl flex flex-col gap-5 flex-shrink">
+          <div className="hidden sm:block min-w-[40%] max-w-[40%] rounded-3xl flex flex-col flex-shrink">
             <div className="divAnimation w-full border-black flex-grow rounded-3xl border-2 flex flex-col justify-end overflow-hidden gap-2">
               <img
                 src={vegSpread.src}
@@ -112,7 +112,7 @@ const Approach = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="divAnimation w-full border-black rounded-3xl border-2 flex-shrink flex flex-col overflow-hidden p-5">
+            <div className="divAnimation w-full border-black rounded-3xl border-2 flex-shrink flex flex-col overflow-hidden p-5 mt-5">
               <h1 className="text-[3.5rem] font-bold">Learn About Our</h1>
               <div className="flex flex-row gap-2 flex-grow">
                 <div onClick={() => handleDivClick(section1)} className="border-2 border-black hover:border-[#35c05f] active:border-[#288f47] py-5 px-4 rounded-l-3xl flex flex-col justify-center items-center w-full group cursor-pointer">
@@ -136,7 +136,7 @@ const Approach = () => {
         </section>
 
         <section
-          className="flex flex-col -mt-32 px-10 bg-[#FAECAD] bg-opacity-30 justify-center gap-8"
+          className="flex flex-col -mt-32 px-10 bg-[#FAECAD] bg-opacity-30 justify-center gap-8 mb-5"
           id="sustainability"
           data-scroll-section
           ref={section1}
