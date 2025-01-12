@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import pdf1 from "../assets/pdf/pow.pdf";
+import pdf2 from "../assets/pdf/plan-of-work-log.pdf";
+
 ---
 
 <Layout title="Documentation Portfolio">
@@ -26,9 +30,9 @@ import Layout from "../layouts/Layout.astro";
     <li><a href="https://www.typescriptlang.org/">typescript: 5.6.3</a></li>
   </ul>
 
-  <div class="flex flex-col items-center justify-center pt-10">
-  <a href="/src/pdf/pow.pdf" class="mx-auto p-4 text-center bg-[#D6FA32] rounded-full">Plan of Work Log</a>
-  <a href="/src/pdf/pow.pdf" class="mx-auto p-4 text-center bg-[#D6FA32] rounded-full">Plan of Work Log</a>
+  <div class="flex flex-row gap-2 items-center justify-center pt-10">
+  <a href={pdf2} class="p-4 text-center bg-[#D6FA32] rounded-full">Plan of Work Log</a>
+  <a href={pdf1} class="p-4 text-center bg-[#D6FA32] rounded-full">Copyright Checklist</a>
 
   </div>
 </main>
